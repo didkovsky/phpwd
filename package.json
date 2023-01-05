@@ -1,0 +1,25 @@
+{
+  "name": "phpwd",
+  "version": "0.0.1",
+  "description": "Partial hashed password protocol",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "metatests test/"
+  },
+  "keywords": [
+    "phpwd",
+    "authentification",
+    "password",
+    "hashing"
+  ],
+  "author": "Sergey Didkovsky <didkovsky.dev@proton.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "metatests": "^0.8.2"
+  }
+}
