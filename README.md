@@ -12,7 +12,7 @@ I will be glad to see your questions, comments and remarks in discussion section
 
 ## How does it works?
 
-When we want to register, we generating many iterations of HMAC of our password with the salt. We use the salt as a key for the HMAC and our password as input. The salt cant be generated on the server side, and will be given to the user, to be sure it is random and safe. The salt - isn't a secret.
+When we want to register, we generating many iterations of HMAC of our password with the salt. We use the salt as a key for the HMAC and our password as input. The salt can be generated on the server side, and will be given to the user, to be sure it is random and safe. The salt - isn't a secret.
 
 ```
           salt      salt      
