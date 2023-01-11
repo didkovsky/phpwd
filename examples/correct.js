@@ -6,7 +6,7 @@ const run = async () => {
   const target = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 10000,
+    index: 11000,
     salt
   })
 
@@ -23,7 +23,7 @@ const run = async () => {
   const phpwd = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 9900,
+    index: 10990,
     salt
   })
 
