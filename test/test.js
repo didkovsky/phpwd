@@ -7,14 +7,14 @@ metatests.test('Correct password and index.', async test => {
   const target = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 10000,
+    index: 11000,
     salt
   })
 
   const phpwd = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 9900,
+    index: 10990,
     salt
   })
 
@@ -29,14 +29,14 @@ metatests.test('Incorrect password.', async test => {
   const target = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 10000,
+    index: 11000,
     salt
   })
 
   const phpwd = await generate({
     alg: 'sha256',
     password: 'NOTpassword',
-    index: 9900,
+    index: 10000,
     salt
   })
 
@@ -53,14 +53,14 @@ metatests.test('Higher index that allowed.', async test => {
   const target = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 10000,
+    index: 11000,
     salt
   })
 
   const phpwd = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 11000,
+    index: 12000,
     salt
   })
 
@@ -77,14 +77,14 @@ metatests.test('Same index as target.', async test => {
   const target = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 10000,
+    index: 11000,
     salt
   })
 
   const phpwd = await generate({
     alg: 'sha256',
     password: 'password',
-    index: 10000,
+    index: 11000,
     salt
   })
 
