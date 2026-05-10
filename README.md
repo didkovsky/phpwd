@@ -95,6 +95,8 @@ JSON
 ## Usage
 See <a href="https://github.com/didkovsky/phpwd/tree/main/examples">./examples</a> folder.
 
+### Node.js
+
 Setting up phpwd
 ``` javascript
 const { createPhpwd } = require('../lib')
@@ -211,6 +213,32 @@ const run = async () => {
 
 run().catch(console.error)
 ```
+
+### Browser
+
+A browser-ready bundle is available at `browser/phpwd.js` and is also exposed through the package `browser`, `unpkg`, and `jsdelivr` fields. It uses the Web Crypto API and does not require Node.js `crypto`, `Buffer`, or `assert` modules.
+
+``` html
+<script src="./browser/phpwd.js"></script>
+<script>
+  const phpwd = window.phpwd.createPhpwd()
+
+  async function run() {
+    const salt = await phpwd.generateSalt()
+    const token = await phpwd.generate({
+      salt,
+      pass: 'password',
+      index: 200000
+    })
+
+    console.log(token)
+  }
+
+  run().catch(console.error)
+</script>
+```
+
+The browser build keeps the same high-level API (`createPhpwd`, `generateSalt`, `generate`, `validate`, `validateInitial`, `getInitialData`, `getAuthData`, and `parse`). Web Crypto supports SHA-1, SHA-256, SHA-384, and SHA-512 HMAC algorithms in browsers; the default `sha256` works in both Node.js and browsers.
 
 Validate
 ``` javascript

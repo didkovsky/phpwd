@@ -2,14 +2,15 @@
   "name": "phpwd",
   "version": "0.1.1",
   "description": "Partial hashed password protocol",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "example": "examples",
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "test": "metatests test/"
+    "test": "metatests test/",
+    "test:browser": "node test/browser.js"
   },
   "keywords": [
     "phpwd",
@@ -21,5 +22,15 @@
   "license": "MIT",
   "devDependencies": {
     "metatests": "^0.8.2"
-  }
+  },
+  "browser": "browser/phpwd.js",
+  "unpkg": "browser/phpwd.js",
+  "jsdelivr": "browser/phpwd.js",
+  "files": [
+    "lib",
+    "browser",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ]
 }
